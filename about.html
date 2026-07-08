@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Abhishek Suthar - Front-end developer | UI designer | Backend Development" />
+    <meta name="description" content="Abhishek Suthar - Full Stack Developer | React, TypeScript, Next.js, Node.js" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600&family=Lato:wght@400;500&display=swap"
@@ -20,38 +20,78 @@
 <body>
 	<section id="about" class="container section">
 		<header class="nav-menu">
-			<h1>Abhishek Suthar</h1>
+			<a href="index.html" style="text-decoration: none; color: inherit;"><h1>Abhishek Suthar</h1></a>
 			<div class="open-btn">
-				<i class="fas fa-bars" style="color: #222831"></i>
+				<i class="fas fa-bars"></i>
 			</div>
 		</header>
 		<div class="flex-container">
 			<div class="flex-inner-container">
-				<div class="brief-intro gs_reveal reveal_fromLeft">
-					<h3 class="gs_reveal">
-						<!-- I am a <span>front-end developer</span> who sometimes does
-							<span>back-end development</span> and also loves to design
-							<span>ui</span> because who doesn't. -->
-						I am pursuing for <span>M.Sc.(IT)</span> from Dhirubhai Ambani Institute
-						of Information and Communication Technology. I have made
-						some projects based on <span>Angular Framework</span> and <span>Spring
-							Framework.</span>
-					</h3>
-				</div>
-				<div class="brief-intro gs_reveal reveal_fromRight">
-					<div class="gs_reveal badges">
-						<img src="img/microsoft-certified-azure-data-fundamentals.png" alt="">
-						<img src="img/assertion-OFJqg0-NQxy05vm1LmcSGQ.png" alt="">
-					</div>
-				</div>
+			<div class="brief-intro gs_reveal reveal_fromLeft">
+				<h3 class="gs_reveal">
+					I am a <span>Full Stack Developer</span> with 3+ years of experience building
+					scalable web applications. Currently working as <span>SDE-2 at Taqtics</span>,
+					where I develop end-to-end product features across frontend and backend.
+					Previously at <span>Roambee</span>, I built customer-facing applications for
+					global clients, including live tracking dashboards and integration portals.
+				</h3>
+			</div>
+			<div class="brief-intro gs_reveal reveal_fromRight">
+				<h3 class="gs_reveal">
+					I enjoy owning features from <span>design to deployment</span>, solving complex
+					technical problems, and building products that have a direct impact on users.
+					Graduated from <span>DA-IICT</span> with M.Sc. in Information Technology.
+				</h3>
+			</div>
 			</div>
 
 			<div class="skills gs_reveal reveal_fromRight">
 				<h3 class="gs_reveal">my skills.</h3>
 				<p class="gs_reveal">
-					html, css, js, angular,java, nodejs, mongodb, expressjs, bootstrap, git, MySQL, Robotics,
-					PostgreSQL, Spring Boot, Swagger, Heroku.
+					JavaScript, TypeScript, React, Next.js, Angular, Node.js, Express.js,
+					HTML, CSS, MySQL, PostgreSQL, MongoDB, Cassandra, Git, Jenkins, Swagger,
+					Postman, Twilio, Nodemailer, Redis, Vercel, Elasticsearch, Google Maps API, Microfrontend, Agentic AI.
 				</p>
+			</div>
+
+			<div class="experience-section gs_reveal" style="margin-top: 3rem;">
+				<h2 class="section-title gs_reveal">Experience</h2>
+				<div class="timeline">
+					<div class="timeline-item gs_reveal">
+						<div class="timeline-content">
+							<h3>SDE-2</h3>
+							<div class="timeline-date">Taqtics | Sept 2025 - Present</div>
+							<p>Developed real-time chat module using Twilio, built configurable Email Template Builder, led legacy API migration, and created reusable Query Builder framework.</p>
+						</div>
+					</div>
+					<div class="timeline-item gs_reveal">
+						<div class="timeline-content">
+							<h3>Full Stack Developer</h3>
+							<div class="timeline-date">Roambee | Mar 2023 - Aug 2025</div>
+							<p>Led Integration Hub portal development from scratch, implemented SSO, integrated third-party APIs, and built Ocean & Air tracking modules with Google Maps API.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="education-section gs_reveal" style="margin-top: 3rem;">
+				<h2 class="section-title gs_reveal">Education</h2>
+				<div class="timeline">
+					<div class="timeline-item gs_reveal">
+						<div class="timeline-content">
+							<h3>M.Sc. (Information Technology)</h3>
+							<div class="timeline-date">DA-IICT | 2021 - 2023</div>
+							<p>CPI: 7.6 - Dhirubhai Ambani Institute of Information and Communication Technology</p>
+						</div>
+					</div>
+					<div class="timeline-item gs_reveal">
+						<div class="timeline-content">
+							<h3>BCA</h3>
+							<div class="timeline-date">J.G. College of Computer Applications | 2018 - 2021</div>
+							<p>CPI: 7.82 - Bachelor of Computer Applications</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -78,6 +118,21 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollToPlugin.min.js"></script>
 	<script src="js/main.js"></script>
+	<button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+		<i class="fas fa-moon"></i>
+	</button>
+	<script>
+		const toggle = document.getElementById('darkModeToggle');
+		const saved = localStorage.getItem('darkMode');
+		if (saved === 'true') {
+			document.body.classList.add('dark-mode');
+		}
+		toggle.addEventListener('click', () => {
+			document.body.classList.toggle('dark-mode');
+			const isDark = document.body.classList.contains('dark-mode');
+			localStorage.setItem('darkMode', isDark);
+		});
+	</script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description"
-          content="Abhishek Suthar- Front-end developer | UI designer | Backend Development"/>
+          content="Abhishek Suthar - Full Stack Developer | React, TypeScript, Next.js, Node.js"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600&family=Lato:wght@400;500&display=swap"
@@ -33,44 +33,17 @@
     <div class="hero-content">
         <div class="hero-content--text">
             <h1 class="content">
-                Student <br/>
-                
+                Full Stack Developer <br/>
+
             </h1>
             <p class="content">
-               Hello! I'm Abhishek Suthar. Let's get to the moon together.
-               
+               Building scalable web applications with React, TypeScript, Next.js & Node.js. 3+ years of experience turning ideas into production-ready products.
+
+            </p>
+            <p class="content hero-location">
+               <i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat, India
             </p>
             <ul class="hero-content__icon-list content">
-                <li class="hero-content__icon-list__li">
-                    <a href="https://github.com/ak15suthar" target="_blank">
-                        <i class="fab fa-github fa-lg"></i>
-                    </a>
-                </li>
-                <li class="hero-content__icon-list__li">
-                    <a href="https://www.linkedin.com/in/abhishek-suthar-021761197/" target="_blank">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                </li>
-                <li class="hero-content__icon-list__li">
-                    <a href="https://www.facebook.com/abhisheksuthar15" target="_blank">
-                        <i class="fab fa-facebook fa-lg"></i>
-                    </a>
-                </li>
-                <li class="hero-content__icon-list__li">
-                    <a href="https://www.instagram.com/abhisheksuthar_" target="_blank">
-                        <i class="fab fa-instagram fa-lg"></i>
-                    </a>
-                </li>
-                <li class="hero-content__icon-list__li">
-                    <a
-                            href="pdf/Resume.pdf"
-                            download="Abhishek SutharResume"
-                            title="Download Resume"
-                    >
-                        <i class="fas fa-download"></i>
-                        <span>Resume</span>
-                    </a>
-                </li>
                 <li class="hero-content__icon-list__li">
                     <a href="projects.html">
                         <i class="fas fa-laptop-code"></i>
@@ -78,6 +51,37 @@
                             Works
                         </span>
                     </a>
+                </li>
+                <li class="hero-content__icon-list__li">
+                    <!-- <a href="https://github.com/ak15suthar" target="_blank">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a> -->
+                </li>
+                <li class="hero-content__icon-list__li">
+                    <!-- <a href="https://www.linkedin.com/in/abhishek-suthar-021761197/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a> -->
+                </li>
+                
+                <li class="hero-content__icon-list__li">
+                    <!-- <a href="https://www.facebook.com/abhisheksuthar15" target="_blank">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a> -->
+                </li>
+                <li class="hero-content__icon-list__li">
+                    <!-- <a href="https://www.instagram.com/abhisheksuthar_" target="_blank">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a> -->
+                </li>
+                <li class="hero-content__icon-list__li">
+                    <!-- <a
+                            href="Abhishek Suthar Resume.pdf"
+                            download="Abhishek Suthar Resume"
+                            title="Download Resume"
+                    >
+                        <i class="fas fa-download"></i>
+                        <span>Resume</span>
+                    </a> -->
                 </li>
             </ul>
         </div>
@@ -112,5 +116,20 @@
 
 <script></script>
 <script src="js/main.js"></script>
+<button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+</button>
+<script>
+    const toggle = document.getElementById('darkModeToggle');
+    const saved = localStorage.getItem('darkMode');
+    if (saved === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isDark);
+    });
+</script>
 </body>
 </html>
